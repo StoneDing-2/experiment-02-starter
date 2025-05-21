@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    /* feel free to change/customize this gradient and font */
+    background: linear-gradient(135deg, #726e77 0%, #b8b1c3 100%);
+    /* feel free to change/customize font */
+    font-family: 'Arial', sans-serif;
+}
+
+.flex-container {
+    /* Make this into a flexbox using display: flex */
+    display: flex;
+    /* Use flexbox properties to stack your tiles vertically and center them */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.flex-tile {
+    /* Make this into a flexbox using display: flex */
+    display: flex;
+    /* Use flexbox properties to stack elements in your tiles vertically and center them */
+    flex-direction: column;
+    align-items: center;
+
+    /* setting the width for each tile */
+    width: 40%;
+
+    /* spacing tiles */
+    margin: 5%;
+    padding: 20px;
+
+    /* background color for tile, feel free to change */
+    background-color: white;
+}
+
+.flex-tile:hover{
+    background: rgb(105, 105, 105);  
+    color: rgb(255, 255, 255);  
+    border: 3px solid rgb(3, 3, 3);  
+    font-size: 24px;
+    transition:all 0.3s ease;
+
+}
+
+
+.flex-tile-img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+
+}
+
+.flex-tile-description{
+    text-align: center;
+    margin-bottom: 15px
+}
+
+.flex-tile-bttn{
+    background-color: black;
+    color:white;
+    border:none;
+    padding: 10px 25px;
+    transition:all 0.1s ease;
+}
+
+
+.flex-tile-bttn:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+.flex-tile-bttn:active{
+    size: 50%;
+    background-color: #726e77;
+    transform: scale(0.95);
+}
+
+@keyframes joggle{
+    0% {transform:rotate(0deg)}
+    15% {transform:rotate(-1.5deg)}
+    25% {transform:rotate(0deg)}
+    35% {transform:rotate(-1.5deg)}
+    50% {transform:rotate(0 deg)}
+    65% {transform:rotate(1.5deg)}
+    75% {transform:rotate(0deg)}
+    75% {transform:rotate(-1.5deg)}
+    100% {transform:rotate(0deg)}
+}
+
+.jig-animation{
+    animation: joggle 1s infinite ease-in-out;
+}
+ /* ### **1. Layout & Structure:**
+
+- Create **three vertical tiles** that are stacked and centered on the page using Flexbox.
+- Each tile must contain:
+    - A **unique image** that represents the theme.
+    - A **header** that describes the image.
+    - A **short description** (1–2 sentences).
+    - A **button** that links to more information (real or fictional, your choice!).
+
+*Hint: Use % units when defining elements’ width*
+
+### **2. Flexbox Styling:**
+
+- Use Flexbox to: X
+- Center the entire collection of tiles within the viewport, both horizontally and vertically.
+- Ensure the content within each tile (image, text, button) is evenly spaced and visually balanced.
+
+
+### **3. Interactive Elements:**
+
+- Add the following CSS animations/transitions:
+    - **Hover Animation**: When the mouse hovers over a tile, the background color or border changes. (same for all tiles)
+    - **Button Animation (same for all buttons)**:
+        - On hover: change the button’s color, size, or add a slight movement.
+        - On click: change the button’s color, size, or add a slight movement. (must be different from hover)
+    - **Keyframe Animation:** Create one unique keyframe animation. This animation can target any element within a tile and affect any property you choose.
+ 
+
+ */
